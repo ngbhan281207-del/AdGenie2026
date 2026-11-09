@@ -460,7 +460,7 @@
   async function requestGenerate(input, avoid) {
     let res;
     try {
-      res = await fetch('/api/generate', {
+      res = await fetch('/.netlify/functions/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...input, avoid })
